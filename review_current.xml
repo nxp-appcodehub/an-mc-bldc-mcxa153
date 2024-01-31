@@ -1,0 +1,19 @@
+<!DOCTYPE opt [
+   <!ENTITY path "/home/zihao/CLR_check/an-mc-bldc-mcxa153/">
+]>
+
+<opt>
+   <board dir="&path;board" git="&path;board" new="0" type="source" />
+   <CMSIS dir="&path;CMSIS" git="&path;CMSIS" new="0" type="source" />
+   <component dir="&path;component" git="&path;component" new="0" type="source" />
+   <Debug dir="&path;Debug" git="&path;Debug" new="0" type="source" />
+   <device dir="&path;device" git="&path;device" new="0" type="source" />
+   <drivers dir="&path;drivers" git="&path;drivers" new="0" type="source" />
+   <freemaster dir="&path;freemaster" git="&path;freemaster" new="0" type="source" />
+   <motor_control dir="&path;motor_control" git="&path;motor_control" new="0" type="source" />
+   <Release dir="&path;Release" git="&path;Release" new="0" type="source" />
+   <rtcesl dir="&path;rtcesl" git="&path;rtcesl" new="0" type="source" />
+   <source dir="&path;source" git="&path;source" new="0" type="source" />
+   <startup dir="&path;startup" git="&path;startup" new="0" type="source" />
+   <utilities dir="&path;utilities" git="&path;utilities" new="0" type="source" />
+</opt>
