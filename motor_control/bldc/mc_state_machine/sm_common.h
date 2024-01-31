@@ -17,7 +17,6 @@
 typedef struct _app_ver
 {
     char cBoardID[20];
-    char cMotorType[4];
     char cExampleID[30];
     char cAppVer[5];
     uint16_t ui16FeatureSet;

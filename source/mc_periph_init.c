@@ -311,7 +311,7 @@ void InitForceCommutation(void)
 
     /* Configure match control register. */
     CTIMER1->MCR |= CTIMER_MCR_MR0R(1U)  |   /* Enable reset of TC after it matches with MR0. */
-                    CTIMER_MCR_MR0I(1U);     /* Enable interrupt generation after TC matches with MR1. */
+                    CTIMER_MCR_MR1I(1U);     /* Enable interrupt generation after TC matches with MR1. */
     
     /* Configure match register. */
     CTIMER1->MR[0] = 0xFFFF; /* Get CTimer1 frequency for correct set Match register value. */
@@ -319,7 +319,7 @@ void InitForceCommutation(void)
     CTIMER1->MR[1] = 0xFFFF;
     
     /* Configure interrupt register. */
-    CTIMER1->IR = CTIMER_IR_MR1INT_MASK | CTIMER_IR_MR0INT_MASK;     /* Set interrupt flag for match channel 0. */
+    CTIMER1->IR = CTIMER_IR_MR1INT_MASK ;     /* Set interrupt flag for match channel 0. */
  
     NVIC_EnableIRQ(CTIMER1_IRQn);            /* Enable LEVEL1 interrupt and update the call back function. */
 

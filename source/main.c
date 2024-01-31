@@ -19,6 +19,19 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
+
+/* Example's feature set in form of bits inside ui16featureSet.
+   This feature set is expected to be growing over time.
+   ... | FEATURE_S_RAMP | FEATURE_FIELD_WEAKENING | FEATURE_ENC
+*/
+#define FEATURE_ENC (0)               /* Encoder feature flag */
+#define FEATURE_FIELD_WEAKENING (0)   /* Field weakening feature flag */
+#define FEATURE_S_RAMP (0)            /* S-ramp feature flag */
+
+#define FEATURE_SET (FEATURE_ENC << (0) | \
+                     FEATURE_FIELD_WEAKENING << (1) | \
+                     FEATURE_S_RAMP << (2))
+
 /* Macro for correct Cortex CM0 / CM4 end of interrupt */
 #define M1_END_OF_ISR \
     {                 \
@@ -59,6 +72,13 @@ uint32_t ctimer0_isr_cnt        =0u;
 uint32_t ctimer1_isr_cnt        =0u;
 uint32_t adc0_isr_cnt           =0u;
 
+/* Structure used in FM to get required ID's */
+app_ver_t g_sAppIdFM = {
+    "frdmmcxa153",    /* board id */
+    "bldc_snsless", /* example id */
+	"1.0.0",      /* sw version */
+    FEATURE_SET,    /* example's feature-set */
+};
 /*******************************************************************************
  * Prototypes
  ******************************************************************************/
@@ -86,6 +106,9 @@ void main(void)
     bDemoMode              = FALSE;
     ui32SpeedStimulatorCnt = 0;
     
+	/*Accessing ID structure to prevent optimization*/
+	g_sAppIdFM.ui16FeatureSet = FEATURE_SET;
+
     /* Init board hardware. */
     BOARD_Init();
     
@@ -114,6 +137,7 @@ void main(void)
     /* infinite loop */
     while (1)
     {
+        /* FreeMASTER Polling function */
         FMSTR_Poll();
     }
 }
@@ -240,12 +264,12 @@ void ADC0_IRQHandler(void)
 void CTIMER1_IRQHandler(void)
 {
     ctimer1_isr_cnt++;
-      GPIO1->PSOR |= 1<<12U;
+
     /* asynchronous time event processing */
     M1_TimeEvent();
-    GPIO1->PCOR |= 1<<12U;
+
     /* Clear the match interrupt flag. */
-    CTIMER1->IR |= CTIMER_IR_MR1INT_MASK | CTIMER_IR_MR0INT_MASK;
+    CTIMER1->IR |= CTIMER_IR_MR1INT_MASK;
 
     /* add empty instructions for correct interrupt flag clearing */
     M1_END_OF_ISR;
@@ -261,8 +285,8 @@ void CTIMER1_IRQHandler(void)
 void CTIMER0_IRQHandler(void)
 {
     static int16_t ui16i = 0;
-    ctimer0_isr_cnt++;
 
+    ctimer0_isr_cnt++;
 
     /* M1 Slow StateMachine call */
     SM_StateMachineSlow(&g_sM1Ctrl);
@@ -298,7 +322,6 @@ void CTIMER0_IRQHandler(void)
 
     /* Clear the match interrupt flag. */
     CTIMER0->IR |= CTIMER_IR_MR0INT(1U);
-
 
     /* Add empty instructions for correct interrupt flag clearing */
     M1_END_OF_ISR;
