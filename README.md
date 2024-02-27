@@ -1,6 +1,6 @@
 # NXP Application Code Hub
 
-[<img src="https://mcuxpresso.nxp.com/static/icon/nxp-logo-color.svg" width="100"/>](https://www.nxp.com)
+[`<img src="https://mcuxpresso.nxp.com/static/icon/nxp-logo-color.svg" width="100"/>`](https://www.nxp.com)
 
 ## Sensorless BLDC motor control on MCXA153
 
@@ -63,21 +63,21 @@ description. The FreeMASTER operation is also described in this document.
 
 ### 3.2 Step 2
 
-Connect the **FRDM-MC-LVBLDC** shield to the **J1~J4** arduino connector of **FRDM-MCXA153** board. Connect the 3-phase wire of the motor to the J7 connector on FRDM-MC-LVBLDC according to phase sequence(**White** wide--phase**A**; **Bule** wide--phase**B**; **Green** wide--phase**C**). Power the FRDM-MC-LVBLDC board with a 12V adaptor.  
-![hardware_connection](image/hardware_connection.png)  
+Connect the **FRDM-MC-LVBLDC** shield to the **J1~J4** arduino connector of **FRDM-MCXA153** board. Connect the 3-phase wire of the motor to the J7 connector on FRDM-MC-LVBLDC according to phase sequence(**White** wide--phase**A**; **Bule** wide--phase**B**; **Green** wide--phase**C**). Power the FRDM-MC-LVBLDC board with a 12V adaptor.
+![hardware_connection](image/hardware_connection.png)
 Compile the project and use a USB cable to connect to the EVK board via **J15** connector. Use MCU-LINK to download program into MCU.
 
 ### 3.3 Step 3
 
-Compile the project and download program into MCU.  Press SW3 on FRDM board to control the motor to run or stop. Or use FreeMASTER project **"bldc_frac.pmpx"** in the code package to control the motor, change rotor speed and obverse the speed or other value.
+Compile the project and download program into MCU.  Press SW2 on FRDM board to control the motor to run or stop. Or use FreeMASTER project **"bldc_frac.pmpx"** in the code package to control the motor, change rotor speed and obverse the speed or other value.
 
 ## 4. Results
 
-The FreeMASTER can be used to completely control the motor control application. The operation in FreeMASTER are described more closely herE.  
-Select the right com in FreeMASTER project, in Project->Options-Comm:  
-![FM_COM](image/FM_COM.png)  
-Operation state and speed command can be configured in FreeMASTER.  
-![FM_operation](image/FM_operation.png)  
+The FreeMASTER can be used to completely control the motor control application. The operation in FreeMASTER are described more closely herE.
+Select the right com in FreeMASTER project, in Project->Options-Comm:
+![FM_COM](image/FM_COM.png)
+Operation state and speed command can be configured in FreeMASTER.
+![FM_operation](image/FM_operation.png)
 
 ## 5. FAQs
 
@@ -114,6 +114,6 @@ Questions regarding the content/correctness of this example can be entered as Is
 
 ## 7. Release Notes
 
-| Version | Description / Update                    |                                  Date |
-| :-----: | --------------------------------------- | ------------------------------------: |
-|   1.0   | Initial release on Application Code Hub | February 23`<sup>`rd`</sup>` 2024 |
+| Version | Description / Update                    |                                    Date |
+| :-----: | --------------------------------------- | --------------------------------------: |
+|   1.0   | Initial release on Application Code Hub | February 23 `<sup>`rd `</sup>` 2024 |
