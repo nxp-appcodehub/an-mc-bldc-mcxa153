@@ -31,7 +31,7 @@ description. The FreeMASTER operation is also described in this document.
 
 - Download and install [MCUXpresso IDE V11.9.0 or later](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE).
 - Download and install the latest version of [FreeMASTER](https://www.nxp.com/design/software/development-software/freemaster-run-time-debugging-tool:FREEMASTER)(3.2.2.2).
-- Download the code from Git repository an-mc-bldc-mcxa153 [!--[an-mc-bldc-mcxa153](https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153/browse)--](!--%5Ban-mc-bldc-mcxa153%5D(https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153/browse)--).
+- Download the code from Git repository: an-mc-bldc-mcxa153.  
 - MCUXpresso for Visual Studio Code: This example supports MCUXpresso for Visual Studio Code, for more information about how to use Visual Studio Code please refer [here](https://www.nxp.com/design/training/getting-started-with-mcuxpresso-for-visual-studio-code:TIP-GETTING-STARTED-WITH-MCUXPRESSO-FOR-VS-CODE).
 
 ## 2. Hardware
@@ -72,11 +72,11 @@ Compile the project and download program into MCU.  Press SW2 on FRDM board to c
 
 ## 4. Results
 
-The FreeMASTER can be used to completely control the motor control application. The operation in FreeMASTER are described more closely herE.
-Select the right com in FreeMASTER project, in Project->Options-Comm:
-![FM_COM](image/FM_COM.png)
-Operation state and speed command can be configured in FreeMASTER.
-![FM_operation](image/FM_operation.png)
+The FreeMASTER can be used to completely control the motor control application. The operation in FreeMASTER are described more closely here.
+Select the right com in FreeMASTER project, in Project->Options-Comm:  
+![FM_COM](image/FM_COM.png)  
+Operation state and speed command can be configured in FreeMASTER.  
+![FM_operation](image/FM_operation.png)  
 
 ## 5. FAQs
 
@@ -115,4 +115,4 @@ Questions regarding the content/correctness of this example can be entered as Is
 
 | Version | Description / Update                    |                                    Date |
 | :-----: | --------------------------------------- | --------------------------------------: |
-|   1.0   | Initial release on Application Code Hub | February 23 `<sup>`rd `</sup>` 2024 |
+|   1.0   | Initial release on Application Code Hub | February 23 <sup>rd </sup> 2024 |
