@@ -1,11 +1,10 @@
 # NXP Application Code Hub
 
-[`<img src="https://mcuxpresso.nxp.com/static/icon/nxp-logo-color.svg" width="100"/>`](https://www.nxp.com)
+[<img src="https://mcuxpresso.nxp.com/static/icon/nxp-logo-color.svg" width="100"/>](https://www.nxp.com)
 
 ## Sensorless BLDC motor control on MCXA153
 
-This application note demonstrates how to implement the six-step commutation control of brushless direct current(BLDC) motor on the MCXA family of MCUs. The NXP Freedom board FRDM-MC-LVBLDC
-is used as a hardware platform for the motor
+This application note demonstrates how to implement the six-step commutation control of brushless direct current(BLDC) motor on the MCXA family of MCUs. The NXP Freedom board FRDM-MC-LVBLDC is used as a hardware platform for the motor
 control reference solution. The hardware-dependent part of the motor control
 software is addressed as well, including a detailed peripheral setup and driver
 description. The FreeMASTER operation is also described in this document.
@@ -63,8 +62,8 @@ description. The FreeMASTER operation is also described in this document.
 
 ### 3.2 Step 2
 
-Connect the **FRDM-MC-LVBLDC** shield to the **J1~J4** arduino connector of **FRDM-MCXA153** board. Connect the 3-phase wire of the motor to the J7 connector on FRDM-MC-LVBLDC according to phase sequence(**White** wide--phase**A**; **Bule** wide--phase**B**; **Green** wide--phase**C**). Power the FRDM-MC-LVBLDC board with a 12V adaptor.
-![hardware_connection](image/hardware_connection.png)
+Connect the **FRDM-MC-LVBLDC** shield to the **J1~J4** arduino connector of **FRDM-MCXA153** board. Connect the 3-phase wire of the motor to the J7 connector on FRDM-MC-LVBLDC according to phase sequence(**White** wide--phase**A**; **Bule** wide--phase**B**; **Green** wide--phase**C**). Power the FRDM-MC-LVBLDC board with a 12V adaptor.  
+![hardware_connection](image/hardware_connection.png)  
 Compile the project and use a USB cable to connect to the EVK board via **J15** connector. Use MCU-LINK to download program into MCU.
 
 ### 3.3 Step 3
