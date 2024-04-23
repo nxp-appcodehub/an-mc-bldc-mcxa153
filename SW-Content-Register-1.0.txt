@@ -2,9 +2,9 @@ NXP Software Content Register
 
 Package:                   an-mc-bldc-mcxa153
 Version:                   1.0
-Outgoing License:          LA_OPT_NXP_Software_License v55 April 2024 Additional Distribution License granted, license in Section 2.3 applies
+Outgoing License:          LA_OPT_NXP_Software_License v55 April 2024 - Additional Distribution License granted, license in Section 2.3 applies
 License File:              LICENSE
-Description and comments:  This application note demonstrates how to implement the six-step commutation control of brushless direct current(BLDC) motor on the MCXA family of MCUs. 
+Description and comments:  This application demonstrates how to implement the six-step commutation control of brushless direct current(BLDC) motor on the MCXA family of MCUs. 
 Release Location:          https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153
 Origin:                    NXP (proprietary)
                            NXP (BSD-3-Clause)
@@ -19,5 +19,5 @@ cmsis                      Name: CMSIS
                            abstraction layer for microcontrollers that are   
                            based on Arm Cortex processors, distributed by    
                            ARM. cores 
-                           Location: CMSIS/ 
-                           Origin: NXP (Apache License 2.0)   
+                           Location: https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153/tree/main/CMSIS/ 
+                           Origin: ARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
