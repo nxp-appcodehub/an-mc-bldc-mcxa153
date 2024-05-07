@@ -16,6 +16,7 @@ description. The FreeMASTER operation is also described in this document.
 #### Peripherals: ADC, PWM
 
 #### Toolchains: MCUXpresso IDE
+#### SDK: SDK_2_14_2_FRDM-MCXA153
 
 ## Table of Contents
 
