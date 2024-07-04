@@ -13,8 +13,6 @@
 #include "fsl_lpuart.h"
 #include "mc_periph_init.h"
 #include "m1_sm_ref_sol.h"
-#include "freemaster.h"
-#include "freemaster_serial_lpuart.h"
 
 /*******************************************************************************
  * Definitions
@@ -50,7 +48,6 @@ static void BOARD_Init(void);
 static void BOARD_InitSysTick(void);
 static void DemoSpeedStimulator(void);
 
-static void init_freemaster_lpuart(void);
 /*******************************************************************************
  * Variables
  ******************************************************************************/
@@ -72,13 +69,6 @@ uint32_t ctimer0_isr_cnt        =0u;
 uint32_t ctimer1_isr_cnt        =0u;
 uint32_t adc0_isr_cnt           =0u;
 
-/* Structure used in FM to get required ID's */
-app_ver_t g_sAppIdFM = {
-    "frdmmcxa153",    /* board id */
-    "bldc_snsless", /* example id */
-	"1.0.0",      /* sw version */
-    FEATURE_SET,    /* example's feature-set */
-};
 /*******************************************************************************
  * Prototypes
  ******************************************************************************/
@@ -105,9 +95,6 @@ void main(void)
     /* disable demo mode after reset */
     bDemoMode              = FALSE;
     ui32SpeedStimulatorCnt = 0;
-    
-	/*Accessing ID structure to prevent optimization*/
-	g_sAppIdFM.ui16FeatureSet = FEATURE_SET;
 
     /* Init board hardware. */
     BOARD_Init();
@@ -125,20 +112,12 @@ void main(void)
     /* Turn off application */
     M1_SetAppSwitch(FALSE);
 
-    /* FreeMASTER communication layer initialization */
-    init_freemaster_lpuart();
-
-    /* FreeMASTER driver initialization */
-    FMSTR_Init();
-
     /* Enable interrupts */
     EnableGlobalIRQ(ui32PrimaskReg);
     
     /* infinite loop */
     while (1)
     {
-        /* FreeMASTER Polling function */
-        FMSTR_Poll();
     }
 }
 
@@ -240,9 +219,6 @@ void ADC0_IRQHandler(void)
 
     /* Enable interrupts  */
     EnableGlobalIRQ(ui32PrimaskReg);
-
-    /* Call FreeMASTER recorder */
-    FMSTR_Recorder(0);
 
     /* Clear the TCOMP INT flag */
     ADC0->STAT |= (uint32_t)(1U << 9);
@@ -430,39 +406,4 @@ void BOARD_InitSysTick(void)
 
     /*Start Sys Timer*/
     SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
-}
-
-/*!
- * @brief LPUART Module initialization (LPUART is a the standard block included e.g. in K66F)
- */
-static void init_freemaster_lpuart(void)
-{
-	/* attach FRO 12M to LPUART0 (debug console) */
-	RESET_PeripheralReset(kLPUART0_RST_SHIFT_RSTn);
-
-    /* attach FRO 12M to LPUART0 (debug console) */
-    CLOCK_SetClockDiv(kCLOCK_DivLPUART0, 1u);
-    CLOCK_AttachClk(BOARD_DEBUG_UART_CLK_ATTACH);
-
-    lpuart_config_t config;
-
-    /*
-     * config.baudRate_Bps = 115200U;
-     * config.parityMode = kUART_ParityDisabled;
-     * config.stopBitCount = kUART_OneStopBit;
-     * config.txFifoWatermark = 0;
-     * config.rxFifoWatermark = 1;
-     * config.enableTx = false;
-     * config.enableRx = false;
-     */
-    LPUART_GetDefaultConfig(&config);
-    config.baudRate_Bps = 115200U;
-    config.enableTx     = false;
-    config.enableRx     = false;
-
-    LPUART_Init((LPUART_Type *)BOARD_DEBUG_UART_BASEADDR, &config, BOARD_DEBUG_UART_CLK_FREQ);
-
-    /* Register communication module used by FreeMASTER driver. */
-    FMSTR_SerialSetBaseAddress((LPUART_Type *)BOARD_DEBUG_UART_BASEADDR);
-
 }
