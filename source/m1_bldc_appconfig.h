@@ -85,7 +85,6 @@
 #define M1_CMT_PER_MIN (682)
 #define M1_START_CMT_ACCELER FRAC16(0.277777777778)
 #define M1_INTEG_TRH (163841)
-//#define M1_INTEG_TRH (123841)
 #endif
 
 // End of generated file

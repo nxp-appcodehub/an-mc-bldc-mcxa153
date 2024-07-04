@@ -2,7 +2,7 @@ NXP Software Content Register
 
 Package:                   an-mc-bldc-mcxa153
 Version:                   1.0
-Outgoing License:          LA_OPT_NXP_Software_License v55 April 2024 - Additional Distribution License granted, license in Section 2.3 applies
+Outgoing License:          LA_OPT_NXP_Software_License v56 April 2024 - Additional Distribution License granted, license in Section 2.3 applies
 License File:              LICENSE
 Description and comments:  This application demonstrates how to implement the six-step commutation control of brushless direct current(BLDC) motor on the MCXA family of MCUs. 
 Release Location:          https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153
@@ -21,3 +21,22 @@ cmsis                      Name: CMSIS
                            ARM. cores 
                            Location: https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153/tree/main/CMSIS/ 
                            Origin: ARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
+
+motor_control_rtcesl       Name: rtcesl                                      
+                           Version: 4.7.1 (CM33)   
+                           Outgoing License: BSD-3-Clause                    
+                           License File: COPYING-BSD-3                       
+                           Format: object code & header files                
+                           Description: NXP Real Time Control Embedded       
+                           Software Library.                                 
+                           Location: rtcesl                       
+                           Origin: NXP (BSD-3-Clause)  
+
+motor_control              Name: motor_control                               
+                           Version: 2.11.0                                   
+                           Outgoing License: BSD-3-Clause                    
+                           License File: COPYING-BSD-3                       
+                           Format: source code                               
+                           Description: Motor control examples for BLDC.                                      
+                           Location: middleware/motor_control                
+                           Origin: NXP (BSD-3-Clause)   
