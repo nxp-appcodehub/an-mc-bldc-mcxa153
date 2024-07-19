@@ -4,9 +4,8 @@ Package:                   an-mc-bldc-mcxa153
 Version:                   1.0
 Description and comments:  This application demonstrates how to implement the six-step commutation control of brushless direct current(BLDC) motor on the MCXA family of MCUs. 
 Release Location:          https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153
-Origin:                    NXP (proprietary)
-                           NXP (BSD-3-Clause)
-                           cmsis - ARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
+Origin:                    NXP (BSD-3-Clause)
+                           cmsis - ARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/releases/tag/5.8.0                         
                              
 cmsis                      Name: CMSIS                                       
                            Version: 5.8.0                                    
@@ -17,24 +16,44 @@ cmsis                      Name: CMSIS
                            abstraction layer for microcontrollers that are   
                            based on Arm Cortex processors, distributed by    
                            ARM. cores 
-                           Location: https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153/tree/main/CMSIS/ 
-                           Origin: ARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
-
-motor_control_rtcesl       Name: rtcesl                                      
-                           Version: 4.7.1 (CM33)   
+                           Release Location:https://github.com/ARM-software/CMSIS_5/releases/tag/5.8.0 
+                           Origin: ARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/releases/tag/5.8.0
+                           
+ SDK_Components             Name: SDK components and board peripheral drivers 
+                           Version: NA                                       
                            Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: object code & header files                
-                           Description: NXP Real Time Control Embedded       
-                           Software Library.                                 
-                           Location: rtcesl                       
-                           Origin: NXP (BSD-3-Clause)  
-
-motor_control              Name: motor_control                               
-                           Version: 2.11.0                                   
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
+                           License File: LICENSE                       
                            Format: source code                               
-                           Description: Motor control examples for BLDC.                                      
-                           Location: middleware/motor_control                
-                           Origin: NXP (BSD-3-Clause)   
+                           Description: SDK components and board peripheral  
+                           drivers, for example, lists and uart drivers.    
+                           Release Location: http://mcuxpresso.nxp.com/                             
+                           Origin: NXP (BSD-3-Clause) 
+                           
+SDK_Device                 Name: SDK SoC files                               
+                           Version: NA                                       
+                           Outgoing License: BSD-3-Clause                    
+                           License File: LICENSE                                              
+                           Format: source code                 
+                           Description: Device system files, startup and utilities files.             
+                           Release Location: http://mcuxpresso.nxp.com/
+                           Origin: NXP (BSD-3-Clause)           
+                           
+SDK_Peripheral_Driver      Name: SDK Peripheral Driver                       
+                           Version: 2.x.x                                    
+                           Outgoing License: BSD-3-Clause                    
+                           License File: LICENSE                                                                    
+                           Format: source code                               
+                           Description: Peripheral drivers are designed for  
+                           the most common use cases identified for the      
+                           underlying hardware block.                        
+                           Release Location: http://mcuxpresso.nxp.com/ 
+                           Origin: NXP (BSD-3-Clause)                                                                     
+
+RTCESL                     Name: RTCESL                      
+                           Version: 4.7.1                                    
+                           Outgoing License: BSD-3-Clause                    
+                           License File: LICENSE                                                                    
+                           Format: source code, object code, header files                                 
+                           Description: Real Time Control Embedded Software Motor Control and Power Conversion Libraries                        
+                           Release Location: http://mcuxpresso.nxp.com/ 
+                           Origin: NXP (BSD-3-Clause) 
