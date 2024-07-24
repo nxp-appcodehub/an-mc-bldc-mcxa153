@@ -2,6 +2,8 @@ NXP Software Content Register
 
 Package:                   an-mc-bldc-mcxa153
 Version:                   1.0
+Outgoing License:          NXP (BSD-3-Clause)
+License File:              LICENSE.txt
 Description and comments:  This application demonstrates how to implement the six-step commutation control of brushless direct current(BLDC) motor on the MCXA family of MCUs. 
 Release Location:          https://github.com/nxp-appcodehub/an-mc-bldc-mcxa153
 Origin:                    NXP (BSD-3-Clause)
