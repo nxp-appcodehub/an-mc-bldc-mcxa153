@@ -24,7 +24,7 @@ cmsis                      Name: CMSIS
  SDK_Components             Name: SDK components and board peripheral drivers 
                            Version: NA                                       
                            Outgoing License: BSD-3-Clause                    
-                           License File: LICENSE                       
+                           License File: LICENSE.txt               
                            Format: source code                               
                            Description: SDK components and board peripheral  
                            drivers, for example, lists and uart drivers.    
@@ -34,7 +34,7 @@ cmsis                      Name: CMSIS
 SDK_Device                 Name: SDK SoC files                               
                            Version: NA                                       
                            Outgoing License: BSD-3-Clause                    
-                           License File: LICENSE                                              
+                           License File: LICENSE.txt                                               
                            Format: source code                 
                            Description: Device system files, startup and utilities files.             
                            Release Location: http://mcuxpresso.nxp.com/
@@ -43,7 +43,7 @@ SDK_Device                 Name: SDK SoC files
 SDK_Peripheral_Driver      Name: SDK Peripheral Driver                       
                            Version: 2.x.x                                    
                            Outgoing License: BSD-3-Clause                    
-                           License File: LICENSE                                                                    
+                           License File: LICENSE.txt                                                                     
                            Format: source code                               
                            Description: Peripheral drivers are designed for  
                            the most common use cases identified for the      
@@ -54,7 +54,7 @@ SDK_Peripheral_Driver      Name: SDK Peripheral Driver
 RTCESL                     Name: RTCESL                      
                            Version: 4.7.1                                    
                            Outgoing License: BSD-3-Clause                    
-                           License File: LICENSE                                                                    
+                           License File: LICENSE.txt                                                                     
                            Format: source code, object code, header files                                 
                            Description: Real Time Control Embedded Software Motor Control and Power Conversion Libraries                        
                            Release Location: http://mcuxpresso.nxp.com/ 
